@@ -1,0 +1,31 @@
+.text-center {
+    text-align: center;
+}
+
+.mt-sm {
+    margin-top: var(--space-sm);
+}
+.mb-sm {
+    margin-bottom: var(--space-sm);
+}
+
+.px-md {
+    padding-inline: var(--space-md);
+}
+.py-md {
+    padding-block: var(--space-md);
+}
+
+.hide-on-mobile {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .hide-on-mobile {
+        display: block;
+    }
+
+    .show-on-mobile {
+        display: none;
+    }
+}

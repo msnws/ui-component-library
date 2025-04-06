@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-base: 16px;
+    --font-lg: 1.25rem;
+    --font-xl: 1.5rem;
+    --line-height: 1.6;
+
+    --color-text: #333;
+    --color-bg: #eee;
+    --color-accent: #0077ff;
+
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+
+    --max-width: 1200px;
+    --breakpoint-sm: 600px;
+    --breakpoint-md: 900px;
+    --breakpoint-lg: 1200px;
+}
+
+body {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: var(--font-base);
+    line-height: var(--line-height);
+    color: var(--color-text);
+    background: var(--color-bg);
+}
+
+h1 {
+    font-weight: bold;
+    color: #eee;
+}
+
+@media (min-width: 400px) and (max-width: 744px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 1.9rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+    }
+}

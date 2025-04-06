@@ -1,0 +1,70 @@
+.navbar {
+    position: sticky;
+    background-color: #111;
+    top: 0;
+    z-index: 10;
+}
+
+.hamburger {
+    color: #eee;
+    border: 1px solid #eee;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10%;
+    background-color: transparent;
+}
+
+.hamburger i {
+    font-size: 1.3rem;
+}
+
+.buttonClass {
+    font-family: "IBM Plex Mono", monospace;
+    background-color: transparent;
+    border: 1px #222 solid;
+    cursor: pointer;
+}
+
+.imageCard,
+.profileCard {
+    background-color: #eee;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.imageCard {
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.imageCard img {
+    width: 100%;
+}
+
+@media (min-width: 400px) and (max-width: 744px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .navLinks {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .buttonClass {
+        font-size: var(--font-base);
+        padding: 0.75rem;
+    }
+}
