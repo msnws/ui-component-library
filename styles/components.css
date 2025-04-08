@@ -35,17 +35,70 @@
     height: 100%;
     width: 100%;
     display: flex;
-}
-
-.imageCard {
+    drop-shadow: 4px 4px 16px rgba(0, 0, 0, 0.6);
     flex-direction: column;
     justify-content: center;
     padding: 1rem;
+    gap: 1rem;
 }
 
 .imageCard img {
     width: 100%;
 }
+
+.profileHeader {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.nameAndTags {
+    display: flex;
+    flex-direction: column;
+}
+
+.nameAndTags ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nameAndTags li {
+    list-style: none;
+    display: inline;
+}
+
+.socialLinks {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sampleHamburger > .hamburger {
+    color: #222;
+    border: 1px solid #222;
+    display: block;
+}
+
+.sampleNav {
+    background-color: #222;
+    color: #eee;
+}
+
+.sampleNav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style: none;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* .sampleNav li {
+    display: inline;
+} */
 
 @media (min-width: 400px) and (max-width: 744px) {
     .navbar {
@@ -66,5 +119,14 @@
     .buttonClass {
         font-size: var(--font-base);
         padding: 0.75rem;
+    }
+
+    .profileCard img {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .sampleNav {
+        padding: 2rem 1rem;
     }
 }

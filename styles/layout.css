@@ -39,7 +39,7 @@
 
 @media (min-width: 400px) and (max-width: 744px) {
     .buttonsSection {
-        padding: 3rem 1rem 4rem 1rem;
+        padding: var(--section-padding);
         height: 100%;
         border: 1px solid red;
     }
@@ -51,7 +51,7 @@
     }
 
     .cardsSection {
-        padding: 3rem 1rem 4rem 1rem;
+        padding: var(--section-padding);
         height: 100%;
         border: 1px solid red;
     }
@@ -59,6 +59,12 @@
     .cardsContainer {
         padding-top: 1.8rem;
         flex-direction: column;
-        gap: 1.8rem;
+        gap: 2.4rem;
+    }
+
+    .navSection {
+        padding: var(--section-padding);
+        height: 100%;
+        border: 1px solid red;
     }
 }

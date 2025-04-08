@@ -25,6 +25,8 @@
     --breakpoint-sm: 600px;
     --breakpoint-md: 900px;
     --breakpoint-lg: 1200px;
+
+    --section-padding: 3rem 1rem 4rem 1rem;
 }
 
 body {
