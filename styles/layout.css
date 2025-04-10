@@ -21,7 +21,8 @@
     flex-wrap: wrap;
 }
 
-.cardsSection {
+.cardsSection,
+.formSection {
     background: linear-gradient(to right, #ff7e5f, #feb47b);
 }
 
@@ -35,6 +36,10 @@
     flex-direction: row;
     gap: 0.5rem;
     align-items: center;
+}
+
+.navContainer {
+    display: flex;
 }
 
 @media (min-width: 400px) and (max-width: 744px) {
@@ -63,6 +68,19 @@
     }
 
     .navSection {
+        padding: var(--section-padding);
+        height: 100%;
+        border: 1px solid red;
+    }
+
+    .navContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.4rem;
+        padding-top: 1.8rem;
+    }
+
+    .formSection {
         padding: var(--section-padding);
         height: 100%;
         border: 1px solid red;

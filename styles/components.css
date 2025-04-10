@@ -35,7 +35,7 @@
     height: 100%;
     width: 100%;
     display: flex;
-    drop-shadow: 4px 4px 16px rgba(0, 0, 0, 0.6);
+    box-shadow: var(--dropShadow);
     flex-direction: column;
     justify-content: center;
     padding: 1rem;
@@ -80,11 +80,14 @@
     color: #222;
     border: 1px solid #222;
     display: block;
+    box-shadow: var(--dropShadow);
 }
 
 .sampleNav {
     background-color: #222;
     color: #eee;
+    box-shadow: var(--dropShadow);
+    width: 100%;
 }
 
 .sampleNav ul {
@@ -99,6 +102,10 @@
 /* .sampleNav li {
     display: inline;
 } */
+
+.sampleForm {
+    background-color: #eee;
+}
 
 @media (min-width: 400px) and (max-width: 744px) {
     .navbar {
@@ -119,6 +126,7 @@
     .buttonClass {
         font-size: var(--font-base);
         padding: 0.75rem;
+        border-radius: 0.25rem;
     }
 
     .profileCard img {
