@@ -1,192 +1,227 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Mason Weis - UI Component Library</title>
-        <link rel="stylesheet" href="styles/main.css" />
-        <script
-            src="https://kit.fontawesome.com/242ae33d0d.js"
-            crossorigin="anonymous"
-        ></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <header>
-            <div class="navbar">
-                <h1>Mason Weis</h1>
-                <nav class="navLinks">
-                    <ul>
-                        <li><a href="#">Buttons</a></li>
-                        <li><a href="#">Cards</a></li>
-                        <li><a href="#">Navigation</a></li>
-                        <li><a href="#">Forms</a></li>
-                        <li><a href="#">Interactions</a></li>
-                    </ul>
-                </nav>
-                <div class="hamburgerDiv" aria-label="menu">
-                    <button class="hamburger">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-        </header>
-        <main>
-            <section class="buttonsSection">
-                <h2>Buttons</h2>
-                <div class="snippetLink">
-                    <i class="fa-brands fa-github"></i>
-                    <p>View on Github</p>
-                </div>
-
-                <div class="buttonContainer">
-                    <button class="buttonPrimary buttonClass">Click Me</button>
-                    <button class="buttonSecondary buttonClass">Or Me</button>
-                    <button class="buttonDisabled buttonClass">Nope!</button>
-                </div>
-            </section>
-            <section class="cardsSection">
-                <h2>Cards</h2>
-                <div class="snippetLink">
-                    <i class="fa-brands fa-github"></i>
-                    <p>View on Github</p>
-                </div>
-                <div class="cardsContainer">
-                    <div class="imageCard">
-                        <img
-                            src="https://geekflare.com/wp-content/uploads/2023/03/img-placeholder.png"
-                            alt="placeholder-image"
-                        />
-                        <div class="imageCardContent">
-                            <h3>Card Title</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mason Weis - UI Component Library</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script
+      src="https://kit.fontawesome.com/242ae33d0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    >
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <h1>Mason Weis</h1>
+        <nav class="navLinks">
+          <ul>
+            <li><a href="#">Buttons</a></li>
+            <li><a href="#">Cards</a></li>
+            <li><a href="#">Navigation</a></li>
+            <li><a href="#">Forms</a></li>
+            <li><a href="#">Interactions</a></li>
+          </ul>
+        </nav>
+        <div class="hamburgerDiv" aria-label="menu">
+          <button class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="buttonsSection">
+        <h2>Buttons</h2>
+        <div class="snippetLink">
+          <i class="fa-brands fa-github"></i>
+          <p>View on Github</p>
+        </div>
+        <div class="buttonContainer">
+          <button class="buttonPrimary buttonClass">Click Me</button>
+          <button class="buttonSecondary buttonClass">Or Me</button>
+          <button class="buttonDisabled buttonClass">Nope!</button>
+        </div>
+      </section>
+      <section class="cardsSection">
+        <h2>Cards</h2>
+        <div class="snippetLink">
+          <i class="fa-brands fa-github"></i>
+          <p>View on Github</p>
+        </div>
+        <div class="cardsContainer">
+          <div class="imageCard">
+            <img
+              src="https://geekflare.com/wp-content/uploads/2023/03/img-placeholder.png"
+              alt="placeholder-image"
+            >
+            <div class="imageCardContent">
+              <h3>Card Title</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. Integer ac turpis in lorem
                                 luctus luctus. Duis eget nisi vel justo
                                 facilisis pharetra. Sed euismod magna non ex
                                 blandit, a pharetra orci vehicula.
-                            </p>
-                        </div>
-                        <button class="buttonClass">Read More</button>
-                    </div>
-                    <div class="profileCard">
-                        <div class="profileHeader">
-                            <img
-                                src="https://geekflare.com/wp-content/uploads/2023/03/img-placeholder.png"
-                                alt="placeholder-image"
-                            />
-                            <div class="nameAndTags">
-                                <h3>First Last</h3>
-                                <ul>
-                                    <li>Tag 1</li>
-                                    <li>Tag 2</li>
-                                    <li>Tag 3</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="socialLinks">
-                            <button class="buttonClass">Social Link 1</button>
-                            <button class="buttonClass">Social Link 2</button>
-                            <button class="buttonClass">Social Link 3</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="navSection">
-                <h2>Nav Elements</h2>
-                <div class="snippetLink">
-                    <i class="fa-brands fa-github"></i>
-                    <p>View on Github</p>
-                </div>
-                <div class="navContainer">
-                    <div class="sampleNav">
-                        <ul>
-                            <li>Item 1</li>
-                            <li>Item 2</li>
-                            <li>Item 3</li>
-                        </ul>
-                    </div>
-                    <hr />
-                    <div class="sampleHamburger hamburgerDiv" aria-label="menu">
-                        <button class="hamburger">
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
-                </div>
-            </section>
-            <section class="formSection">
-                <h2>Form Elements</h2>
-                <div class="snippetLink">
-                    <i class="fa-brands fa-github"></i>
-                    <p>View on Github</p>
-                </div>
-                <div class="sampleForm">
-                    <form>
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea>
-                        <label for="selectMenu">Select Menu</label>
-                        <select id="selectMenu" name="selectMenu">
-                            <option value="option1">Option 1</option>
-                            <option value="option2">Option 2</option>
-                            <option value="option3">Option 3</option>
-                        </select>
-                        <label for="radio">Radio Button</label>
-                        <input type="radio" id="radio" name="radio" value="option1">
-                        <label for="checkbox">Checkbox</label>
-                        <input type="checkbox" id="checkbox" name="checkbox">
-                        <button type="submit" class="buttonClass">Submit</button>
-                    </form>
-                </div>
-            </section>
-            <section class="interactiveSection">
-                <h2>Interactive Elements</h2>
-                <section class="themeSwitcherSection">
-                    <h3>Theme Switcher</h3>
-                </section>
-                <section class="miscSection">
-                    <h3>Misc. Utilities</h3>
-                    <section class="tooltipsSection">
-                        <h4>Tooltips</h4>
-                    </section>
-                    <section class="accordionsSection">
-                        <h4>Accordions</h4>
-                    </section>
-                    <section class="modalsSection">
-                        <h4>Modals</h4>
-                    </section>
-                    <section class="loadersSection">
-                        <h4>Loaders & Spinners</h4>
-                    </section>
-                    <section class="breadcrumbsSection">
-                        <h4>Breadcrumbs</h4>
-                    </section>
-                </section>
-            </section>
-        </main>
-        <footer>
-            <div class="footerContent">
-                <h2>Mason Weis</h2>
-                <div class="socialLinks">
-                    <a href="https://github.com/msnws" target="_blank"
-                        ><i class="fa-brands fa-github"></i
-                    ></a>
-                    <a
-                        href="https://www.linkedin.com/in/mason-weis/"
-                        target="_blank"
-                        ><i class="fa-brands fa-linkedin"></i
-                    ></a>
-                    <a href="mailto:mason@mason-weis.com" target="_blank"
-                        ><i class="fa-solid fa-envelope"></i
-                    ></a>
-                </div>
+              </p>
             </div>
-        </footer>
-        <script src="scripts.js"></script>
-    </body>
+            <button class="buttonClass">Read More</button>
+          </div>
+          <div class="profileCard">
+            <div class="profileHeader">
+              <img
+                src="https://geekflare.com/wp-content/uploads/2023/03/img-placeholder.png"
+                alt="placeholder-image"
+              >
+              <div class="nameAndTags">
+                <h3>First Last</h3>
+                <ul>
+                  <li>Tag 1</li>
+                  <li>Tag 2</li>
+                  <li>Tag 3</li>
+                </ul>
+              </div>
+            </div>
+            <div class="socialLinks">
+              <button class="buttonClass">Social Link 1</button>
+              <button class="buttonClass">Social Link 2</button>
+              <button class="buttonClass">Social Link 3</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="navSection">
+        <h2>Nav Elements</h2>
+        <div class="snippetLink">
+          <i class="fa-brands fa-github"></i>
+          <p>View on Github</p>
+        </div>
+        <div class="navContainer">
+          <div class="sampleNav">
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="sampleHamburger hamburgerDiv" aria-label="menu">
+            <button class="hamburger">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="formSection">
+        <h2>Form Elements</h2>
+        <div class="snippetLink">
+          <i class="fa-brands fa-github"></i>
+          <p>View on Github</p>
+        </div>
+        <div class="sampleForm">
+          <form>
+            <div class="topContent">
+              <h3>Contact</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eligendi nostrum corporis vel nisi.</p>
+            </div>
+            <div class="nameInput">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required class="inputClass">
+            </div>
+            <div class="messageInput">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required class="inputClass"></textarea>
+            </div>
+            <div class="selectInput">
+              <label for="selectMenu">Select Menu</label>
+              <select id="selectMenu" name="selectMenu" class="inputClass">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+            </div>
+            <div class="radioInput">
+              <div class="radioField">
+                <input type="radio" id="radio" name="radio" value="option1">
+                <label for="radio">Radio Button</label>
+              </div>
+              <div class="radioField">
+                <input type="radio" id="radio" name="radio" value="option2">
+                <label for="radio">Radio Button</label>
+              </div>
+              <div class="radioField">
+                <input type="radio" id="radio" name="radio" value="option3">
+                <label for="radio">Radio Button</label>
+              </div>
+            </div>
+            <div class="checkboxInput">
+              <div class="checkboxField">
+                <input type="checkbox" id="checkbox" name="checkbox">
+                <label for="checkbox">I agree to the terms and conditions</label>
+              </div>
+              <div class="checkboxField">
+                <input type="checkbox" id="checkbox" name="checkbox">
+                <label for="checkbox">I promise I agree to the terms and conditions</label>
+              </div>
+              <div class="checkboxField">
+                <input type="checkbox" id="checkbox" name="checkbox">
+                <label for="checkbox">Seriously. I really really promise</label>
+              </div>
+            </div>
+            <button type="submit" class="buttonClass">Submit</button>
+          </form>
+        </div>
+      </section>
+      <section class="interactiveSection">
+        <h2>Interactive Elements</h2>
+        <section class="themeSwitcherSection">
+          <h3>Theme Switcher</h3>
+        </section>
+        <section class="miscSection">
+          <h3>Misc. Utilities</h3>
+          <section class="tooltipsSection">
+            <h4>Tooltips</h4>
+          </section>
+          <section class="accordionsSection">
+            <h4>Accordions</h4>
+          </section>
+          <section class="modalsSection">
+            <h4>Modals</h4>
+          </section>
+          <section class="loadersSection">
+            <h4>Loaders & Spinners</h4>
+          </section>
+          <section class="breadcrumbsSection">
+            <h4>Breadcrumbs</h4>
+          </section>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <div class="footerContent">
+        <h2>Mason Weis</h2>
+        <div class="socialLinks">
+          <a
+            href="https://github.com/msnws"
+            target="_blank"
+          ><i class="fa-brands fa-github"></i></a>
+          <a
+            href="https://www.linkedin.com/in/mason-weis/"
+            target="_blank"
+          ><i class="fa-brands fa-linkedin"></i></a>
+          <a
+            href="mailto:mason@mason-weis.com"
+            target="_blank"
+          ><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
 </html>
