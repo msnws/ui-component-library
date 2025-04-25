@@ -3,6 +3,27 @@
     background-color: #111;
     top: 0;
     z-index: 10;
+    width: 100%;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1; /* allows it to take remaining space after the h1 */
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    color: #eee;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+.navLinks a {
+    color: #eee;
+    text-decoration: none;
 }
 
 .hamburger {
@@ -32,8 +53,7 @@
 .imageCard,
 .profileCard {
     background-color: #eee;
-    height: 100%;
-    width: 100%;
+
     display: flex;
     box-shadow: var(--dropShadow);
     flex-direction: column;
@@ -84,6 +104,7 @@
     box-shadow: var(--dropShadow);
 }
 
+/* TODO round the corners and add drop shadow */
 .sampleNav {
     background-color: #222;
     color: #eee;
@@ -175,6 +196,86 @@
     align-items: center;
 }
 
+.switch {
+    position: relative;
+    display: inline-block;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: calc(100% - 8px);
+    width: calc(50% - 4px);
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+
+input:checked + .slider {
+    background-color: #2196f3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+.accordion {
+    background-color: #ddd;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.footerLinks i {
+    text-decoration: none;
+    color: #222;
+}
+
 @media (min-width: 400px) and (max-width: 744px) {
     .navbar {
         display: flex;
@@ -195,6 +296,12 @@
         font-size: var(--font-base);
         padding: 0.75rem;
         border-radius: 0.25rem;
+    }
+
+    .imageCard,
+    .profileCard {
+        height: 100%;
+        width: 100%;
     }
 
     .profileCard img {
@@ -218,5 +325,153 @@
 
     .checkboxInput {
         margin-bottom: 1rem;
+    }
+
+    .switch {
+        width: 100%;
+        height: 2.5rem;
+    }
+}
+
+@media (min-width: 745px) and (max-width: 1133px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .navLinks {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .topButtons {
+        width: 30%;
+    }
+
+    .buttonClass {
+        font-size: var(--font-base);
+        padding: 0.75rem;
+        border-radius: 0.25rem;
+    }
+
+    .imageCard,
+    .profileCard {
+        flex: 1 1 47%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profileCard {
+        justify-content: space-between;
+    }
+
+    .profileCard img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .sampleNav {
+        padding: 2rem 1rem;
+    }
+
+    .sampleHamburger > .hamburger {
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sampleForm form {
+        margin-top: 1.5rem;
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    textarea {
+        height: 10rem;
+    }
+
+    .checkboxInput {
+        margin-bottom: 1rem;
+    }
+
+    .switch {
+        width: 100%;
+        height: 2.5rem;
+    }
+}
+
+@media (min-width: 1134px) and (max-width: 1511px) {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.3rem 3rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .topButtons {
+        width: 30%;
+    }
+
+    .buttonClass {
+        font-size: var(--font-base);
+        padding: 0.75rem;
+        border-radius: 0.25rem;
+    }
+
+    .imageCard,
+    .profileCard {
+        flex: 1 1 47%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profileCard {
+        justify-content: space-between;
+    }
+
+    .profileCard img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .sampleNav {
+        padding: 2rem 1rem;
+    }
+
+    .sampleHamburger > .hamburger {
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sampleForm form {
+        margin-top: 1.5rem;
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    textarea {
+        height: 10rem;
+    }
+
+    .checkboxInput {
+        margin-bottom: 1rem;
+    }
+
+    .switch {
+        width: 100%;
+        height: 2.5rem;
     }
 }

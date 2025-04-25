@@ -20,13 +20,13 @@
     <header>
       <div class="navbar">
         <h1>Mason Weis</h1>
-        <nav class="navLinks">
-          <ul>
-            <li><a href="#">Buttons</a></li>
-            <li><a href="#">Cards</a></li>
-            <li><a href="#">Navigation</a></li>
-            <li><a href="#">Forms</a></li>
-            <li><a href="#">Interactions</a></li>
+        <nav>
+          <ul class="navLinks">
+            <li><a href="#buttonsSection">Buttons</a></li>
+            <li><a href="#cardsSection">Cards</a></li>
+            <li><a href="#navigationSection">Navigation</a></li>
+            <li><a href="#formsSection">Forms</a></li>
+            <li><a href="#interactionsSection">Interactions</a></li>
           </ul>
         </nav>
         <div class="hamburgerDiv" aria-label="menu">
@@ -44,9 +44,9 @@
           <p>View on Github</p>
         </div>
         <div class="buttonContainer">
-          <button class="buttonPrimary buttonClass">Click Me</button>
-          <button class="buttonSecondary buttonClass">Or Me</button>
-          <button class="buttonDisabled buttonClass">Nope!</button>
+          <button class="buttonPrimary buttonClass topButtons">Click Me</button>
+          <button class="buttonSecondary buttonClass topButtons">Or Me</button>
+          <button class="buttonDisabled buttonClass topButtons">Nope!</button>
         </div>
       </section>
       <section class="cardsSection">
@@ -110,7 +110,7 @@
               <li>Item 3</li>
             </ul>
           </div>
-          <hr>
+          <hr class="simpleDivider">
           <div class="sampleHamburger hamburgerDiv" aria-label="menu">
             <button class="hamburger">
               <i class="fa-solid fa-bars"></i>
@@ -182,23 +182,81 @@
         <h2>Interactive Elements</h2>
         <section class="themeSwitcherSection">
           <h3>Theme Switcher</h3>
+          <div class="snippetLink">
+            <i class="fa-brands fa-github"></i>
+            <p>View on Github</p>
+          </div>
+          <div class="toggleContainer">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
         </section>
         <section class="miscSection">
           <h3>Misc. Utilities</h3>
           <section class="tooltipsSection">
             <h4>Tooltips</h4>
+            <hr class="underline">
+            <div class="snippetLink">
+              <i class="fa-brands fa-github"></i>
+              <p>View on Github</p>
+            </div>
+            <div class="tooltipContainer">
+              <ul class="tooltipList">
+                <li class="tooltip1">Text</li>
+                <li class="tooltip2">Text</li>
+                <li class="tooltip3">Text</li>
+                <li class="tooltip4">Text</li>
+                <li class="tooltip5">Text</li>
+              </ul>
+            </div>
           </section>
           <section class="accordionsSection">
             <h4>Accordions</h4>
+            <hr class="underline">
+            <div class="snippetLink">
+              <i class="fa-brands fa-github"></i>
+              <p>View on Github</p>
+            </div>
+            <div class="acccordionContainer">
+              <button class="accordion">Section 1</button>
+              <div class="panel">
+                <p>Lorem ipsum...</p>
+              </div>
+              <button class="accordion">Section 2</button>
+              <div class="panel">
+                <p>Lorem ipsum...</p>
+              </div>
+              <button class="accordion">Section 3</button>
+              <div class="panel">
+                <p>Lorem ipsum...</p>
+              </div>
+            </div>
           </section>
           <section class="modalsSection">
             <h4>Modals</h4>
+            <hr class="underline">
+            <div class="snippetLink">
+              <i class="fa-brands fa-github"></i>
+              <p>View on Github</p>
+            </div>
           </section>
           <section class="loadersSection">
             <h4>Loaders & Spinners</h4>
+            <hr class="underline">
+            <div class="snippetLink">
+              <i class="fa-brands fa-github"></i>
+              <p>View on Github</p>
+            </div>
           </section>
           <section class="breadcrumbsSection">
             <h4>Breadcrumbs</h4>
+            <hr class="underline">
+            <div class="snippetLink">
+              <i class="fa-brands fa-github"></i>
+              <p>View on Github</p>
+            </div>
           </section>
         </section>
       </section>
@@ -206,7 +264,7 @@
     <footer>
       <div class="footerContent">
         <h2>Mason Weis</h2>
-        <div class="socialLinks">
+        <div class="footerLinks">
           <a
             href="https://github.com/msnws"
             target="_blank"

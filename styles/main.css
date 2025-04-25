@@ -2,15 +2,3 @@
 @import "./layout.css";
 @import "./components.css";
 @import "./utilities.css";
-
-@media (min-width: 600px) {
-    /* Tablet styles */
-}
-
-@media (min-width: 900px) {
-    /* Small desktop */
-}
-
-@media (min-width: 1200px) {
-    /* Large screens */
-}
