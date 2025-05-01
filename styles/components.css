@@ -46,9 +46,49 @@
 .buttonClass {
     font-family: "IBM Plex Mono", monospace;
     background-color: transparent;
-    border: 1px #222 solid;
+    border: 1px #2e3a59 solid;
     cursor: pointer;
+    color: #2e3a59;
 }
+
+.buttonPrimary {
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.buttonPrimary::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #2e3a59;
+    transition: width 0.45s ease;
+    z-index: -1;
+}
+
+.buttonPrimary:hover::after {
+    width: 100%;
+}
+
+.buttonPrimary:hover {
+    color: #eee;
+}
+
+.clicked {
+    transform: scale(0.95);
+}
+
+.rebound {
+    transform: scale(1.02);
+    transition: transform 0.15s ease-out;
+}
+
+/* .buttonPrimary:hover {
+    background-color: #2e3a59;
+    color: #eee;
+} */
 
 .imageCard,
 .profileCard {
