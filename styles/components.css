@@ -53,7 +53,7 @@
 
 .buttonPrimary {
     position: relative;
-    transition: transform 0.2s ease;
+    transition: transform 0.1s ease-in-out;
 }
 
 .buttonPrimary::after {
@@ -76,19 +76,88 @@
     color: #eee;
 }
 
+.scaler {
+    transform: scale(1.10;);
+}
+
 .clicked {
     transform: scale(0.95);
+    transition: transform 0.04s ease-in;
 }
 
 .rebound {
     transform: scale(1.02);
-    transition: transform 0.15s ease-out;
+    transition: transform 0.08s cubic-bezier(0.3, 1.5, 0.7, 1);
 }
 
-/* .buttonPrimary:hover {
-    background-color: #2e3a59;
+.relax {
+    transform: scale(1);
+    transition: transform 0.5s cubic-bezier(0.4, 0.8, 0.6, 1);
+}
+
+.buttonSecondary {
+    background-color: #b65d5d;
     color: #eee;
-} */
+    border: 1px solid #b65d5d;
+    transition: all 0.2s ease;
+    z-index: 10;
+    position: relative;
+}
+
+.buttonSecondary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 5px 15px #b65d5d;
+}
+
+.animBorder {
+    position: relative;
+    transition: animation 0.5s ease;
+    z-index: 0;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.animBorder::after,
+.animBorder::before {
+    --angle: 0deg;
+    content: "";
+    position: absolute;
+    inset: -6px;
+    background-image: conic-gradient(
+        from var(--angle),
+        transparent 50%,
+        #2e3a59
+    );
+    /* top: 50%;
+    left: 50%;
+    translate: -50% -50%; */
+    z-index: -1;
+    /* padding: 1.8rem; */
+    border-radius: inherit;
+    animation: 3s spin linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        --angle: 0deg;
+    }
+    100% {
+        --angle: 360deg;
+    }
+}
+
+.animBorder::before {
+    filter: blur(10px);
+    opacity: 0.5;
+}
+
+.buttonWrapper {
+    width: 100%;
+}
 
 .imageCard,
 .profileCard {

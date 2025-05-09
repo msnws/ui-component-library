@@ -1,16 +1,31 @@
 const buttonPrimary = document.querySelectorAll(".buttonPrimary");
 
 buttonPrimary.forEach((button) => {
-  button.addEventListener("click", () => {
+  button.addEventListener("mousedown", () => {
+    button.classList.remove("rebound", "relax");
     button.classList.add("clicked");
+  });
 
-    setTimeout(() => {
-      button.classList.remove("clicked");
-      button.classList.add("rebound");
-    }, 50);
+  button.addEventListener("mouseup", () => {
+    button.classList.remove("clicked");
+    button.classList.add("rebound");
 
     setTimeout(() => {
       button.classList.remove("rebound");
-    }, 300);
+      button.classList.add("relax");
+    }, 150); // slightly shorter than rebound transition
+
+    setTimeout(() => {
+      button.classList.remove("relax");
+    }, 600); // matches relax duration
+  });
+
+  button.addEventListener("mouseleave", () => {
+    button.classList.remove("clicked", "rebound", "relax");
+  });
+
+  button.addEventListener("mouse", () => {
+    button.classList.add("scaler");
+    console.log("class added");
   });
 });
