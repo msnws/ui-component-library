@@ -44,7 +44,7 @@
 }
 
 .buttonClass {
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "Poppins", monospace;
     background-color: transparent;
     border: 1px #2e3a59 solid;
     cursor: pointer;
@@ -54,6 +54,9 @@
 .buttonPrimary {
     position: relative;
     transition: transform 0.1s ease-in-out;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
 }
 
 .buttonPrimary::after {
@@ -70,6 +73,7 @@
 
 .buttonPrimary:hover::after {
     width: 100%;
+    z-index: -1;
 }
 
 .buttonPrimary:hover {
@@ -109,54 +113,60 @@
     box-shadow: 0px 5px 15px #b65d5d;
 }
 
-.animBorder {
-    position: relative;
-    transition: animation 0.5s ease;
-    z-index: 0;
-}
-
-@property --angle {
-    syntax: "<angle>";
-    inherits: false;
-    initial-value: 0deg;
-}
-
-.animBorder::after,
-.animBorder::before {
-    --angle: 0deg;
+.buttonSecondary::after {
     content: "";
     position: absolute;
-    inset: -6px;
-    background-image: conic-gradient(
-        from var(--angle),
-        transparent 50%,
-        #2e3a59
-    );
-    /* top: 50%;
-    left: 50%;
-    translate: -50% -50%; */
-    z-index: -1;
-    /* padding: 1.8rem; */
-    border-radius: inherit;
-    animation: 3s spin linear infinite;
-}
-
-@keyframes spin {
-    0% {
-        --angle: 0deg;
-    }
-    100% {
-        --angle: 360deg;
-    }
-}
-
-.animBorder::before {
-    filter: blur(10px);
-    opacity: 0.5;
-}
-
-.buttonWrapper {
     width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: opacity 0.15s;
+    pointer-events: none;
+    border-radius: inherit;
+}
+
+.buttonSecondary.click2::after {
+    opacity: 1;
+}
+
+.buttonDisabled {
+    background-color: #bbb;
+    color: #888;
+    border: 1px solid #999;
+    cursor: not-allowed;
+    transition: transform ease 1s;
+}
+
+.buttonDisabled:hover {
+    transform: scale(0.98);
+}
+
+.buttonDisabled.click3 {
+    animation: nope 0.5s ease;
+}
+
+@keyframes nope {
+    0% {
+        transform: scale(0.98) translateX(0);
+    }
+
+    25% {
+        transform: scale(0.98) translateX(2px);
+    }
+
+    50% {
+        transform: scale(0.98) translateX(-2px);
+    }
+
+    75% {
+        transform: scale(0.98) translateX(2px);
+    }
+
+    100% {
+        transform: scale(0.98) translateX(0);
+    }
 }
 
 .imageCard,

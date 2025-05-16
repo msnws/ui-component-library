@@ -1,4 +1,6 @@
 const buttonPrimary = document.querySelectorAll(".buttonPrimary");
+const buttonSecondary = document.querySelectorAll(".buttonSecondary");
+const buttonDisabled = document.querySelectorAll(".buttonDisabled");
 
 buttonPrimary.forEach((button) => {
   button.addEventListener("mousedown", () => {
@@ -27,5 +29,23 @@ buttonPrimary.forEach((button) => {
   button.addEventListener("mouse", () => {
     button.classList.add("scaler");
     console.log("class added");
+  });
+});
+
+buttonSecondary.forEach((button) => {
+  button.addEventListener("mousedown", () => {
+    button.classList.add("click2");
+  });
+  button.addEventListener("mouseup", () => {
+    button.classList.remove("click2");
+  });
+});
+
+buttonDisabled.forEach((button) => {
+  button.addEventListener("click", () => {
+    button.classList.add("click3");
+    setTimeout(() => {
+      button.classList.remove("click3");
+    }, 500);
   });
 });
