@@ -16,19 +16,19 @@
     list-style: none;
     display: flex;
     flex-direction: row;
-    color: #eee;
+    color: var(--bg);
     justify-content: space-between;
     gap: 2.5rem;
 }
 
 .navLinks a {
-    color: #eee;
+    color: var(--bg);
     text-decoration: none;
 }
 
 .hamburger {
-    color: #eee;
-    border: 1px solid #eee;
+    color: var(--surface);
+    border: 1px solid var(--surface);
     width: 2.5rem;
     height: 2.5rem;
     display: flex;
@@ -77,7 +77,7 @@
 }
 
 .buttonPrimary:hover {
-    color: #eee;
+    color: var(--bg);
 }
 
 .scaler {
@@ -101,7 +101,7 @@
 
 .buttonSecondary {
     background-color: #b65d5d;
-    color: #eee;
+    color: var(--bg);
     border: 1px solid #b65d5d;
     transition: all 0.2s ease;
     z-index: 10;
@@ -169,10 +169,28 @@
     }
 }
 
-.imageCard,
-.profileCard {
-    background-color: #eee;
+.imageCard {
+    background-color: var(--surface);
+    display: flex;
+    box-shadow: var(--dropShadow);
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 5px;
+}
 
+.imageCard > .imageCardContent {
+    padding: 1.5rem;
+}
+
+.imageCard > .cardInteraction {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.profileCard {
+    background-color: var(--surface);
     display: flex;
     box-shadow: var(--dropShadow);
     flex-direction: column;
@@ -182,8 +200,25 @@
     border-radius: 5px;
 }
 
+.cardInteraction {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardInteraction > .shareButton {
+    width: 15%;
+}
+
+.cardInteraction > .readMore {
+    width: 80%;
+}
+
 .imageCard img {
     width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 .profileHeader {
@@ -223,10 +258,14 @@
     box-shadow: var(--dropShadow);
 }
 
+.profileCard img {
+    border-radius: 5px;
+}
+
 /* TODO round the corners and add drop shadow */
 .sampleNav {
     background-color: #222;
-    color: #eee;
+    color: var(--surface);
     box-shadow: var(--dropShadow);
     width: 100%;
 }
@@ -245,7 +284,7 @@
 } */
 
 .sampleForm form {
-    background-color: #eee;
+    background-color: var(--bg);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -275,6 +314,7 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: flex;
+    background-color: var(--surface);
 }
 
 .radioField {
@@ -367,7 +407,7 @@ input:checked + .slider:before {
 }
 
 .accordion {
-    background-color: #ddd;
+    background-color: var(--surface);
     color: #444;
     cursor: pointer;
     padding: 18px;

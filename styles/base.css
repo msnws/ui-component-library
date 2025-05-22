@@ -9,6 +9,27 @@
 }
 
 :root {
+    /* UI Colors */
+
+    --bg: #f8f7f4;
+    --surface: #ffffff;
+    --brand: #2e3a59;
+    --cta: #b65d5d;
+    --accent: #5a8c74;
+    --highlight: #f5a623;
+    --error: #d94f4f;
+    --text: #1e1e1e;
+    --text-muted: #5a5a5a;
+
+    --hero-start: #2e3a59;
+    --hero-end: #b65d5d;
+
+    --red-hero-start: #b65d5d;
+    --red-hero-end: #b65d5ddd;
+
+    --blue-hero-start: #2e3a59;
+    --blue-hero-end: #5a8c74;
+
     --font-base: 16px;
     --font-lg: 1.25rem;
     --font-xl: 1.5rem;
@@ -47,7 +68,7 @@ body {
 
 h1 {
     font-weight: bold;
-    color: #eee;
+    color: var(--bg);
 }
 
 .simpleDivider {

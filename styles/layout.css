@@ -21,9 +21,22 @@
     flex-wrap: wrap;
 }
 
+.buttonsSection,
+.navSection,
+.interactiveSection {
+    background-color: var(--bg);
+}
+
 .cardsSection,
 .formSection {
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background: linear-gradient(45deg, var(--hero-start), var(--hero-end));
+}
+
+.cardsSection h2,
+.formSection h2,
+.cardsSection .snippetLink,
+.formSection .snippetLink {
+    color: var(--bg);
 }
 
 .cardsContainer {
@@ -61,7 +74,7 @@
 }
 
 footer {
-    background-color: #bbb;
+    background-color: var(--text-muted);
     color: #222;
 }
 
