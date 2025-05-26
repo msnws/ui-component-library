@@ -1,9 +1,12 @@
 .navbar {
     position: sticky;
-    background-color: #111;
+    /* background-color: #111; */
+    background-color: var(--bg);
     top: 0;
-    z-index: 10;
+    z-index: 100;
     width: 100%;
+    border-bottom: 1px solid #eee;
+    box-shadow: 1px 1px 10px #ddd;
 }
 
 .navbar nav {
@@ -16,19 +19,26 @@
     list-style: none;
     display: flex;
     flex-direction: row;
-    color: var(--bg);
+    color: var(--text);
     justify-content: space-between;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 .navLinks a {
-    color: var(--bg);
+    color: var(--text);
     text-decoration: none;
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+.navLinks a:hover {
+    background-color: #3662e322;
+    color: var(--brand);
 }
 
 .hamburger {
-    color: var(--surface);
-    border: 1px solid var(--surface);
+    color: var(--text);
+    border: 1.5px solid var(--text);
     width: 2.5rem;
     height: 2.5rem;
     display: flex;
@@ -49,17 +59,28 @@
     border: 1px #2e3a59 solid;
     cursor: pointer;
     color: #2e3a59;
+    border-radius: 1.2rem;
 }
 
 .buttonPrimary {
+    background-color: var(--text);
+    color: var(--bg);
+    border: 1px solid var(--text);
+}
+
+.buttonPrimary:hover {
+    background-color: #1e1e1eee;
+}
+
+/* .buttonPrimary {
     position: relative;
     transition: transform 0.1s ease-in-out;
     position: relative;
     z-index: 0;
     overflow: hidden;
-}
+} */
 
-.buttonPrimary::after {
+/* .buttonPrimary::after {
     content: "";
     position: absolute;
     width: 0;
@@ -69,16 +90,16 @@
     background-color: #2e3a59;
     transition: width 0.45s ease;
     z-index: -1;
-}
+} */
 
-.buttonPrimary:hover::after {
+/* .buttonPrimary:hover::after {
     width: 100%;
     z-index: -1;
 }
 
 .buttonPrimary:hover {
     color: var(--bg);
-}
+} */
 
 .scaler {
     transform: scale(1.10;);
@@ -90,7 +111,7 @@
 }
 
 .rebound {
-    transform: scale(1.02);
+    transform: scale(1.01);
     transition: transform 0.08s cubic-bezier(0.3, 1.5, 0.7, 1);
 }
 
@@ -100,6 +121,38 @@
 }
 
 .buttonSecondary {
+    position: relative;
+    transition: transform 0.1s ease-in-out;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    color: var(--brand);
+    border: 1.5px var(--brand) solid;
+    transition: background-color 0.2s ease;
+}
+
+.buttonSecondary::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #3662e322;
+    transition: width 0.25s ease;
+    z-index: -1;
+}
+
+.buttonSecondary:hover::after {
+    width: 100%;
+    z-index: -1;
+}
+
+.click2 {
+    background-color: #3662e333;
+}
+
+/* .buttonSecondary {
     background-color: #b65d5d;
     color: var(--bg);
     border: 1px solid #b65d5d;
@@ -125,11 +178,7 @@
     transition: opacity 0.15s;
     pointer-events: none;
     border-radius: inherit;
-}
-
-.buttonSecondary.click2::after {
-    opacity: 1;
-}
+}*/
 
 .buttonDisabled {
     background-color: #bbb;
@@ -179,6 +228,10 @@
     border-radius: 5px;
 }
 
+.imageCard p {
+    color: var(--text-muted);
+}
+
 .imageCard > .imageCardContent {
     padding: 1.5rem;
 }
@@ -208,11 +261,20 @@
 }
 
 .cardInteraction > .shareButton {
-    width: 15%;
+    width: 10%;
+}
+
+.shareButton {
+    border: none;
+    color: #777;
+}
+
+.shareButton:hover {
+    background-color: #eee;
 }
 
 .cardInteraction > .readMore {
-    width: 80%;
+    width: 85%;
 }
 
 .imageCard img {
@@ -284,7 +346,7 @@
 } */
 
 .sampleForm form {
-    background-color: var(--bg);
+    background-color: var(--surface);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -454,7 +516,7 @@ input:checked + .slider:before {
     .buttonClass {
         font-size: var(--font-base);
         padding: 0.75rem;
-        border-radius: 0.25rem;
+        border-radius: 0.3rem;
     }
 
     .imageCard,

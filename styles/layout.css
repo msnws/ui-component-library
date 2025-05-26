@@ -16,27 +16,26 @@
     gap: var(--space-sm);
 }
 
+header {
+    position: relative;
+    z-index: 1;
+}
+
 .buttonContainer {
     display: flex;
     flex-wrap: wrap;
 }
 
-.buttonsSection,
-.navSection,
-.interactiveSection {
+#buttonsSection,
+#navSection,
+#interactiveSection {
     background-color: var(--bg);
 }
 
-.cardsSection,
-.formSection {
-    background: linear-gradient(45deg, var(--hero-start), var(--hero-end));
-}
-
-.cardsSection h2,
-.formSection h2,
-.cardsSection .snippetLink,
-.formSection .snippetLink {
-    color: var(--bg);
+#cardsSection,
+#formSection {
+    background: linear-gradient(315deg, #3662e355, var(--bg));
+    border: 1px solid #eee;
 }
 
 .cardsContainer {
@@ -100,7 +99,7 @@ footer {
 @media (min-width: 400px) and (max-width: 744px) {
     /* TODO: condense all sections into single class */
 
-    .buttonsSection {
+    #buttonsSection {
         padding: var(--sm-section-padding);
         height: 100%;
     }
@@ -111,7 +110,7 @@ footer {
         gap: 1.5rem;
     }
 
-    .cardsSection {
+    #cardsSection {
         padding: var(--sm-section-padding);
         height: 100%;
     }
@@ -122,7 +121,7 @@ footer {
         gap: 2.4rem;
     }
 
-    .navSection {
+    #navSection {
         padding: var(--sm-section-padding);
         height: 100%;
     }
@@ -134,17 +133,17 @@ footer {
         padding-top: 1.8rem;
     }
 
-    .formSection {
+    #formSection {
         padding: var(--sm-section-padding);
         height: 100%;
     }
 
-    .interactiveSection {
+    #interactiveSection {
         padding: var(--sm-section-padding);
         height: 100%;
     }
 
-    .themeSwitcherSection {
+    #themeSwitcherSection {
         padding: var(--sm-subsection-padding);
         height: 100%;
     }
@@ -153,32 +152,32 @@ footer {
         margin-top: 1.8rem;
     }
 
-    .miscSection {
+    #miscSection {
         padding: var(--sm-subsection-padding);
         height: 100%;
     }
 
-    .tooltipsSection {
+    #tooltipsSection {
         padding: 1rem 0rem 4rem 0rem;
         height: 100%;
     }
 
-    .accordionsSection {
+    #accordionsSection {
         padding: var(--sm-subsection-padding);
         height: 100%;
     }
 
-    .modalsSection {
+    #modalsSection {
         padding: var(--sm-subsection-padding);
         height: 100%;
     }
 
-    .loadersSection {
+    #loadersSection {
         padding: var(--sm-subsection-padding);
         height: 100%;
     }
 
-    .breadcrumbsSection {
+    #breadcrumbsSection {
         padding: var(--sm-subsection-padding);
         height: 100%;
     }
@@ -195,7 +194,7 @@ footer {
 @media (min-width: 745px) and (max-width: 1133px) {
     /* TODO: condense all sections into single class */
 
-    .buttonsSection {
+    #buttonsSection {
         padding: var(--sm-section-padding);
         height: 100%;
     }
@@ -207,7 +206,7 @@ footer {
         gap: 1.5rem;
     }
 
-    .cardsSection {
+    #cardsSection {
         padding: var(--sm-section-padding);
         height: 100%;
     }
@@ -220,7 +219,7 @@ footer {
         align-items: stretch;
     }
 
-    .navSection {
+    #navSection {
         padding: var(--sm-section-padding);
         height: 100%;
     }
@@ -232,17 +231,17 @@ footer {
         padding-top: 1.8rem;
     }
 
-    .formSection {
+    #formSection {
         padding: var(--sm-section-padding);
         height: 100%;
     }
 
-    .interactiveSection {
+    #interactiveSection {
         padding: var(--sm-section-padding);
         height: 100%;
     }
 
-    .themeSwitcherSection {
+    #themeSwitcherSection {
         padding: var(--sm-subsection-padding);
         height: 100%;
     }
@@ -251,32 +250,32 @@ footer {
         margin-top: 1.8rem;
     }
 
-    .miscSection {
+    #miscSection {
         padding: var(--sm-subsection-padding);
         height: 100%;
     }
 
-    .tooltipsSection {
+    #tooltipsSection {
         padding: 1rem 0rem 4rem 0rem;
         height: 100%;
     }
 
-    .accordionsSection {
+    #accordionsSection {
         padding: var(--sm-subsection-padding);
         height: 100%;
     }
 
-    .modalsSection {
+    #modalsSection {
         padding: var(--sm-subsection-padding);
         height: 100%;
     }
 
-    .loadersSection {
+    #loadersSection {
         padding: var(--sm-subsection-padding);
         height: 100%;
     }
 
-    .breadcrumbsSection {
+    #breadcrumbsSection {
         padding: var(--sm-subsection-padding);
         height: 100%;
     }
@@ -293,7 +292,7 @@ footer {
 @media (min-width: 1134px) and (max-width: 1511px) {
     /* TODO: condense all sections into single class */
 
-    .buttonsSection {
+    #buttonsSection {
         padding: var(--md-section-padding);
         height: 100%;
     }
@@ -305,7 +304,7 @@ footer {
         gap: 1.5rem;
     }
 
-    .cardsSection {
+    #cardsSection {
         padding: var(--md-section-padding);
         height: 100%;
     }
@@ -318,7 +317,7 @@ footer {
         align-items: stretch;
     }
 
-    .navSection {
+    #navSection {
         padding: var(--md-section-padding);
         height: 100%;
     }
@@ -330,17 +329,17 @@ footer {
         padding-top: 1.8rem;
     }
 
-    .formSection {
+    #formSection {
         padding: var(--md-section-padding);
         height: 100%;
     }
 
-    .interactiveSection {
+    #interactiveSection {
         padding: var(--md-section-padding);
         height: 100%;
     }
 
-    .themeSwitcherSection {
+    #themeSwitcherSection {
         padding: var(--md-subsection-padding);
         height: 100%;
     }
@@ -349,32 +348,32 @@ footer {
         margin-top: 1.8rem;
     }
 
-    .miscSection {
+    #miscSection {
         padding: var(--md-subsection-padding);
         height: 100%;
     }
 
-    .tooltipsSection {
+    #tooltipsSection {
         padding: 1rem 0rem 4rem 0rem;
         height: 100%;
     }
 
-    .accordionsSection {
+    #accordionsSection {
         padding: var(--sm-subsection-padding);
         height: 100%;
     }
 
-    .modalsSection {
+    #modalsSection {
         padding: var(--sm-subsection-padding);
         height: 100%;
     }
 
-    .loadersSection {
+    #loadersSection {
         padding: var(--sm-subsection-padding);
         height: 100%;
     }
 
-    .breadcrumbsSection {
+    #breadcrumbsSection {
         padding: var(--sm-subsection-padding);
         height: 100%;
     }
