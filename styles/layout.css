@@ -73,13 +73,15 @@ header {
 }
 
 footer {
-    background-color: var(--text-muted);
+    border-top: 1px solid #ddd;
+    background-color: var(--bg);
     color: #222;
 }
 
 .footerContent {
     display: flex;
     flex-direction: row;
+    background-color: var(--bg);
     justify-content: space-between;
     align-items: flex-end;
 }
@@ -101,13 +103,14 @@ footer {
 
     #buttonsSection {
         padding: var(--sm-section-padding);
-        height: 100%;
+        height: calc(100vh - 170px);
     }
 
     .buttonContainer {
         padding-top: 1.8rem;
         flex-direction: column;
         gap: 1.5rem;
+        height: 100%;
     }
 
     #cardsSection {
@@ -183,7 +186,8 @@ footer {
     }
 
     footer {
-        padding-top: 2rem;
+        /* padding-top: 2rem; */
+        height: 50px;
     }
 
     .footerContent {
@@ -196,7 +200,7 @@ footer {
 
     #buttonsSection {
         padding: var(--sm-section-padding);
-        height: 100%;
+        height: calc(100vh - 170px);
     }
 
     .buttonContainer {
@@ -281,7 +285,8 @@ footer {
     }
 
     footer {
-        padding-top: 4rem;
+        /* padding-top: 4rem; */
+        height: 50px;
     }
 
     .footerContent {
@@ -289,12 +294,12 @@ footer {
     }
 }
 
-@media (min-width: 1134px) and (max-width: 1511px) {
+@media (min-width: 1134px) {
     /* TODO: condense all sections into single class */
 
     #buttonsSection {
         padding: var(--md-section-padding);
-        height: 100%;
+        height: calc(100vh - 195px);
     }
 
     .buttonContainer {
@@ -379,7 +384,8 @@ footer {
     }
 
     footer {
-        padding-top: 4rem;
+        height: 50px;
+        /* padding-top: 4rem; */
         padding-left: 3rem;
         padding-right: 3rem;
     }

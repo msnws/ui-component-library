@@ -627,7 +627,7 @@ input:checked + .slider:before {
     }
 }
 
-@media (min-width: 1134px) and (max-width: 1511px) {
+@media (min-width: 1134px) {
     .navbar {
         display: flex;
         flex-direction: row;

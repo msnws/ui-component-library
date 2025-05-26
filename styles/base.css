@@ -144,7 +144,7 @@ select {
     }
 }
 
-@media (min-width: 1134px) and (max-width: 1511px) {
+@media (min-width: 1134px) {
     h1 {
         font-size: 3.3rem;
     }
