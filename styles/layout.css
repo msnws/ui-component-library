@@ -46,7 +46,7 @@ header {
 .snippetLink {
     display: flex;
     flex-direction: row;
-    color: var(--text-muted);
+    color: var(--text);
     gap: 0.5rem;
     align-items: center;
 }
@@ -98,6 +98,7 @@ footer {
 .footerContent h2 {
     margin: 0;
     line-height: 1;
+    font-size: 1.3rem;
 }
 
 @media (min-width: 400px) and (max-width: 744px) {
