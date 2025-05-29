@@ -77,14 +77,14 @@
 }
 
 .buttonPrimary {
-    background-color: var(--text);
-    color: var(--bg);
-    border: 1px solid var(--text);
-    font-weight: 600;
+    background-color: var(--brand);
+    color: #ffffff;
+    border: 1px solid transparent;
+    font-weight: 400;
 }
 
 .buttonPrimary:hover {
-    background-color: var(--text-transparent);
+    background-color: var(--brand-hl2);
 }
 
 /* .buttonPrimary {
@@ -141,10 +141,10 @@
     position: relative;
     z-index: 0;
     overflow: hidden;
-    color: var(--brand);
-    border: 2px var(--brand) solid;
+    color: var(--text);
+    border: 1.2px var(--button-border) solid;
     transition: background-color 0.2s ease;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .buttonSecondary::after {
@@ -154,7 +154,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: var(--brand-highlight);
+    background-color: var(--disabled);
     transition: width 0.25s ease;
     z-index: -1;
 }
@@ -165,7 +165,7 @@
 }
 
 .click2 {
-    background-color: #3662e333;
+    background-color: var(--disabled-dark);
 }
 
 /* .buttonSecondary {
@@ -199,10 +199,10 @@
 .buttonDisabled {
     background-color: var(--disabled);
     color: var(--disabled-dark);
-    border: 1.5px solid var(--disabled-dark);
+    border: 1.2px solid var(--disabled-dark);
     cursor: not-allowed;
     transition: transform ease 1s;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .buttonDisabled:hover {
@@ -243,6 +243,12 @@
     justify-content: center;
     gap: 1rem;
     border-radius: 5px;
+    border: 1.5px solid var(--divider);
+}
+
+.imageCard h3 {
+    color: var(--secondary);
+    font-weight: 800;
 }
 
 .imageCard p {
@@ -268,6 +274,16 @@
     padding: 1.5rem;
     gap: 1rem;
     border-radius: 5px;
+    border: 1.5px solid var(--divider);
+}
+
+.profileCard h3 {
+    color: var(--secondary);
+    font-weight: 800;
+}
+
+.profileCard p {
+    color: var(--text-muted);
 }
 
 .cardInteraction {
@@ -535,7 +551,7 @@ input:checked + .slider:before {
     }
 
     .buttonClass {
-        font-size: var(--font-base);
+        font-size: var(--font-small);
         padding: 0.75rem;
         border-radius: 0.3rem;
     }

@@ -34,8 +34,9 @@ header {
 
 #cardsSection,
 #formSection {
-    background: linear-gradient(315deg, #3662e355, var(--bg));
-    border: 1px solid #eee;
+    background: linear-gradient(315deg, var(--brand-highlight), var(--bg));
+    border-top: 1px solid var(--divider);
+    border-bottom: 1px solid var(--divider);
 }
 
 .cardsContainer {
@@ -106,7 +107,7 @@ footer {
 
     #buttonsSection {
         padding: var(--sm-section-padding);
-        height: calc(100vh - 170px);
+        height: 100%;
     }
 
     .buttonContainer {
@@ -203,7 +204,7 @@ footer {
 
     #buttonsSection {
         padding: var(--sm-section-padding);
-        height: calc(100vh - 170px);
+        height: 100%;
     }
 
     .buttonContainer {
@@ -302,7 +303,7 @@ footer {
 
     #buttonsSection {
         padding: var(--md-section-padding);
-        height: calc(100vh - 195px);
+        height: 100%;
     }
 
     .buttonContainer {
