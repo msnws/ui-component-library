@@ -5,8 +5,8 @@
     top: 0;
     z-index: 100;
     width: 100%;
-    border-bottom: 1px solid #eee;
-    box-shadow: 1px 1px 10px #ddd;
+    /* border-bottom: 1px solid #eee;
+    box-shadow: 1px 1px 10px #ddd; */
 }
 
 .navbar nav {
@@ -53,6 +53,20 @@
     font-size: 1.3rem;
 }
 
+.toggle {
+    font-size: 1.3rem;
+    color: var(--text);
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+.toggle:hover {
+    background-color: #3662e322;
+    color: var(--brand);
+    cursor: pointer;
+}
+
 .buttonClass {
     font-family: "Poppins", monospace;
     background-color: transparent;
@@ -66,10 +80,11 @@
     background-color: var(--text);
     color: var(--bg);
     border: 1px solid var(--text);
+    font-weight: 600;
 }
 
 .buttonPrimary:hover {
-    background-color: #1e1e1eee;
+    background-color: var(--text-transparent);
 }
 
 /* .buttonPrimary {
@@ -127,8 +142,9 @@
     z-index: 0;
     overflow: hidden;
     color: var(--brand);
-    border: 1.5px var(--brand) solid;
+    border: 2px var(--brand) solid;
     transition: background-color 0.2s ease;
+    font-weight: 600;
 }
 
 .buttonSecondary::after {
@@ -138,7 +154,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #3662e322;
+    background-color: var(--brand-highlight);
     transition: width 0.25s ease;
     z-index: -1;
 }
@@ -181,11 +197,12 @@
 }*/
 
 .buttonDisabled {
-    background-color: #bbb;
-    color: #888;
-    border: 1px solid #999;
+    background-color: var(--disabled);
+    color: var(--disabled-dark);
+    border: 1.5px solid var(--disabled-dark);
     cursor: not-allowed;
     transition: transform ease 1s;
+    font-weight: 600;
 }
 
 .buttonDisabled:hover {
@@ -494,7 +511,11 @@ input:checked + .slider:before {
 
 .footerLinks i {
     text-decoration: none;
-    color: #222;
+    color: var(--text);
+}
+
+.footerLinks i:hover {
+    color: var(--brand);
 }
 
 @media (min-width: 400px) and (max-width: 744px) {

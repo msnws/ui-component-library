@@ -1,6 +1,7 @@
 const buttonPrimary = document.querySelectorAll(".buttonPrimary");
 const buttonSecondary = document.querySelectorAll(".buttonSecondary");
 const buttonDisabled = document.querySelectorAll(".buttonDisabled");
+const toggle = document.querySelector(".toggle");
 
 buttonPrimary.forEach((button) => {
   button.addEventListener("mousedown", () => {
@@ -48,4 +49,14 @@ buttonDisabled.forEach((button) => {
       button.classList.remove("click3");
     }, 500);
   });
+});
+
+toggle.addEventListener("click", () => {
+  const html = document.querySelector("html");
+  html.classList.toggle("dark");
+  if (html.classList.contains("dark")) {
+    toggle.innerHTML = '<i class="fa-regular fa-sun"></i>';
+  } else {
+    toggle.innerHTML = '<i class="fa-regular fa-moon"></i>';
+  }
 });
